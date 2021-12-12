@@ -4609,7 +4609,7 @@ const io = __importStar(__webpack_require__(1));
 const path = __importStar(__webpack_require__(622));
 function StartMinikube() {
     return __awaiter(this, void 0, void 0, function* () {
-        yield exec.exec('minikube', ['start', '--wait=all', '--memory 4096', '--cpus 4']);
+        yield exec.exec('minikube', ['start', '--wait=all']);
     });
 }
 exports.StartMinikube = StartMinikube;

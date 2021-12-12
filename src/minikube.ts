@@ -6,7 +6,7 @@ import * as io from '@actions/io'
 import * as path from 'path'
 
 export async function StartMinikube(): Promise<void> {
-  await exec.exec('minikube', ['start', '--wait=all', '--memory 4096', '--cpus 4'])
+  await exec.exec('minikube', ['start', '--wait=all'])
 }
 
 export function getDownloadUrl(version: string): string {
