@@ -4610,6 +4610,7 @@ const path = __importStar(__webpack_require__(622));
 function StartMinikube() {
     return __awaiter(this, void 0, void 0, function* () {
         yield exec.exec('minikube', ['start', '--wait=all']);
+        yield exec.exec('minikube', ['addons enable ingress']);
     });
 }
 exports.StartMinikube = StartMinikube;
