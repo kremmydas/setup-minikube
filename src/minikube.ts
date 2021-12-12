@@ -7,6 +7,7 @@ import * as path from 'path'
 
 export async function StartMinikube(): Promise<void> {
   await exec.exec('minikube', ['start', '--wait=all'])
+  await exec.exec('minikube', ['addons enable ingress'])
 }
 
 export function getDownloadUrl(version: string): string {
