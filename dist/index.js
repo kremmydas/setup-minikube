@@ -1282,7 +1282,7 @@ const minikube_1 = __webpack_require__(928);
 function run() {
     return __awaiter(this, void 0, void 0, function* () {
         try {
-            yield minikube_1.DownloadMinikube('1.10.0-beta.1');
+            yield minikube_1.DownloadMinikube('1.24.0');
             yield minikube_1.StartMinikube();
         }
         catch (error) {
@@ -4609,7 +4609,7 @@ const io = __importStar(__webpack_require__(1));
 const path = __importStar(__webpack_require__(622));
 function StartMinikube() {
     return __awaiter(this, void 0, void 0, function* () {
-        yield exec.exec('minikube', ['start', '--wait=all']);
+        yield exec.exec('minikube', ['start', '--wait=all', '--memory 4096', '--cpus 4']);
     });
 }
 exports.StartMinikube = StartMinikube;
